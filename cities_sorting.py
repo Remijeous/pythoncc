@@ -1,0 +1,10 @@
+cities = ['london', 'captown', 'sydney', 'madrid', 'goa']
+#cities.sort()
+#print(cities)
+#print("Sorted Cities are " + cities.sort() + "\n \t")
+#sorted_cities = cities.sort()
+print(sorted(cities))
+cities.reverse()
+print(cities)
+print(len(cities))
+print(cities.title())
