@@ -25,6 +25,10 @@ def get_number_of_lines():
             print("Please enter a number")
     return lines
 
+def get_bet():
+    while True:
+        amount = input()
+
 def main():
     balance = deposit()
     lines = get_number_of_lines()
