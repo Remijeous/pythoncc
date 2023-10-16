@@ -1,6 +1,0 @@
-name = "Remi"
-leave_balance = 14
-year = 2023
-
-print("Dear " + name + ",")
-print("You have " + str(leave_balance) + " days leave balance in the year of " + str(year))
