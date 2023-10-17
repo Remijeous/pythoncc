@@ -1,0 +1,4 @@
+input() - Getting inputs from users
+title() - capitalize words in a setence
+split() - splits a string into a list of words, using a specified delimiter.
+len() - to find the length of the words
