@@ -1,17 +1,6 @@
+from art import logo
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(logo)
 
 def add(n1, n2):
     return n1 + n2
@@ -32,13 +21,25 @@ operations = {
     "/": div
 }
 
+def calculator():
 
-num1 = int(input("Whats the First number? "))
-for operand, operation in operations.items():
-    print(operand)
-select_operation = input("Select symbol of operation you want to execute: ")
-num2 = int(input("What's the Second number? "))
-calculation_function = operations[select_operation]
-answer = calculation_function(num1, num2)
+    num1 = float(input("Whats the First number? "))
+    for operand, operation in operations.items():
+        print(operand)
+    should_continue = True
 
-print(f"{num1} {select_operation} {num2} = {answer}")
+    while should_continue:
+        select_operation = input("Pick an operation: ")
+        num2 = float(input("What's the next number?: "))
+        calculation_function = operations[select_operation]
+        answer = calculation_function(num1, num2)
+
+        print(f"{num1} {select_operation} {num2} = {answer}")
+
+        if input(f"Type 'y' to continue caculating with {answer}, or type 'n' to exit.: ") == 'y':
+            num1 = answer
+        else:
+            should_continue = False
+            print("\033c", end="")
+            calculator()
+
